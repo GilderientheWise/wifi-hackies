@@ -26,4 +26,4 @@ for file in wifi_files:
 
 
 payload_str = " & ".join("%s=%s" % (k,v) for k,v in payload.items())
-r = requests.post(url, params='for
+r = requests.post(url, params='format-json', data=payload_str)
